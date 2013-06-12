@@ -1,0 +1,9 @@
++ write expressions, not statements
++ use repl/console
++ stay immutable
++ use option
++ annotate non-trivial return types for public methods
++ use def for abstract members
++ Composition can use Inheritance
++ limit the scope of implicits
++ avoid implicit views

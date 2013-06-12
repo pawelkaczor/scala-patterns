@@ -1,0 +1,6 @@
+package typeclass
+
+class Person {
+
+
+}

@@ -1,0 +1,10 @@
+First look in current scope
+- Implicit defined in current scope
+- Explicit imports
+- wildcard imports
+
+Parts of the type of implicit value being looked up and their companion objects
+- companion objects of the type
+- compantion objects of the type arguments of types
+- outer objects for nested types
+- other dimensions

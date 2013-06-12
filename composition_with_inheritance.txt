@@ -1,0 +1,11 @@
+Composition + Inheritance 
+
+trait Logger {...}
+
+trait HasLogger { 
+	def logger: Logger
+}
+
+trait HasAwesomeLogger {
+	lazy val logger = new AwesomeLogger
+}
