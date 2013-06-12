@@ -9,7 +9,16 @@ package object typeclass {
     def ser(t: Restaurant): String = "Restaurant serialized"
   }
 
-  implicit def ListSerializer[T](implicit ev: Serializable[T]) =
+  /*
+    implicit def ListSerializer[T](implicit ev: Serializable[T]) =
+      new Serializable[List[T]] {
+        def ser(xs: List[T]) =
+          xs.map(Serializable.serialize(_)).mkString("List(", ",", ")")
+      }
+  */
+  // simplified:
+
+  implicit def ListSerializer[T: Serializable] =
     new Serializable[List[T]] {
       def ser(xs: List[T]) =
         xs.map(Serializable.serialize(_)).mkString("List(", ",", ")")
