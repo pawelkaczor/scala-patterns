@@ -18,6 +18,7 @@ package object typeclass {
   */
   // simplified:
 
+
   implicit def ListSerializer[T: Serializable] =
     new Serializable[List[T]] {
       def ser(xs: List[T]) =
