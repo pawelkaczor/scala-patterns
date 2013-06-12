@@ -1,6 +1,6 @@
 package typeclass
 
-class Person {
+case class Person(name: String) {
 
-
+  override def toString = name
 }
