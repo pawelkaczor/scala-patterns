@@ -3,11 +3,14 @@ package cake
 object Main {
 
   def main(args: Array[String]) {
-    val context = new UserService with DummyUserRepository
+    val userService = new UserService with DummyUserRepository
 
-    val u = context.createUser("Pawel")
+    val user = userService.createUser("Pawel")
 
-    println(String.format("User created %s", u))
+    // details hidden
+    // user.dummyUserDetails
+
+    println(String.format("User created %s of class %s", user, user.getClass))
   }
 
 }

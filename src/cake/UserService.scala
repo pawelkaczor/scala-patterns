@@ -4,8 +4,9 @@ trait UserService {
   self: UserRepository =>
 
   def createUser(name: String): User = {
-    val u = User(name)
+    val u = mkUser(name)
     save(u)
     u
   }
+
 }
